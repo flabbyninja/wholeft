@@ -41,5 +41,4 @@ public class User {
     public int getAge() {
         return getAge(LocalDate.now());
     }
-
 }

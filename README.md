@@ -1,3 +1,3 @@
 # wholeft
 
-Spring Boot app performing analysis on people, hierarchies and dates 
+Spring Boot app performing analysis on hierarchies and dates 
