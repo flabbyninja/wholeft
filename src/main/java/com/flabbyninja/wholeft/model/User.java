@@ -27,6 +27,9 @@ public class User {
     @Column(name = "last_nm")
     private String lastName;
 
+    @Column(name = "hair_colour")
+    private String hairColour;
+
     @Column(name = "parent_id")
     private Long parentId;
 
