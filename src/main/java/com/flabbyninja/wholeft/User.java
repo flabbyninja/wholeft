@@ -1,44 +1,46 @@
 package com.flabbyninja.wholeft;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.time.Period;
 
-@ToString
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-public class User {
+@NoArgsConstructor
+@Entity
+@Table(name = "my_users")
+class User {
 
-    @Getter
-    @Setter
-    private long id;
+    @Id
+    private Long id;
 
-    @Getter
-    @Setter
+    @Column(name = "first_nm")
     private String firstName;
 
-    @Getter
-    @Setter
+    @Column(name = "last_nm")
     private String lastName;
 
-    @Getter
-    @Setter
-    private long parentId;
+    @Column(name = "parent_id")
+    private Long parentId;
 
-    @Getter
-    @Setter
+    @Column(name = "birth_dt")
     private LocalDate birthDate;
 
-    @Getter
-    @Setter
+    @Column(name = "death_dt")
     private LocalDate deathDate;
 
-    public int getAge(LocalDate onDate) {
+    int getAge(LocalDate onDate) {
         return Period.between(this.getBirthDate(), onDate).getYears();
     }
 
-    public int getAge() {
+    int getAge() {
         return getAge(LocalDate.now());
     }
 }
