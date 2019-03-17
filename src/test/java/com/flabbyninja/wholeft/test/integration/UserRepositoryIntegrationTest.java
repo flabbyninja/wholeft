@@ -14,6 +14,8 @@ import java.time.Month;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//TODO: Refactor tests to clean up Optional usage
+
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @DisplayName("User Repository Test")
