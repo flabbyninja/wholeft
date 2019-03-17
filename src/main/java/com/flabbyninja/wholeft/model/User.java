@@ -1,4 +1,4 @@
-package com.flabbyninja.wholeft;
+package com.flabbyninja.wholeft.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +16,7 @@ import java.time.Period;
 @NoArgsConstructor
 @Entity
 @Table(name = "my_users")
-class User {
+public class User {
 
     @Id
     private Long id;
@@ -36,11 +36,11 @@ class User {
     @Column(name = "death_dt")
     private LocalDate deathDate;
 
-    int getAge(LocalDate onDate) {
+    public int getAge(LocalDate onDate) {
         return Period.between(this.getBirthDate(), onDate).getYears();
     }
 
-    int getAge() {
+    public int getAge() {
         return getAge(LocalDate.now());
     }
 }

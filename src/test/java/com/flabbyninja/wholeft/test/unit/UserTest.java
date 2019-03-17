@@ -1,5 +1,6 @@
-package com.flabbyninja.wholeft;
+package com.flabbyninja.wholeft.test.unit;
 
+import com.flabbyninja.wholeft.model.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
