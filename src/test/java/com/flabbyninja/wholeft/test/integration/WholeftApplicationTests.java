@@ -1,4 +1,4 @@
-package com.flabbyninja.wholeft;
+package com.flabbyninja.wholeft.test.integration;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
