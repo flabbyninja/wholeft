@@ -29,16 +29,16 @@ class UserServiceIntegrationTest {
     @Test
     @DisplayName("Test parent - one")
     void testParentOne() throws Exception {
-        User testUser = new User(101L, "MC", "Hammer", 1L, LocalDate.now(), LocalDate.of(2099, Month.DECEMBER, 31));
+        User testUser = new User(101L, "MC", "Hammer", "Black", 1L, LocalDate.now(), LocalDate.of(2099, Month.DECEMBER, 31));
         assertEquals(Arrays.asList(1L), userService.getParentTree(testUser));
     }
 
     @Test
     @DisplayName("Test parent - doesn't exist")
     void testParentInvalid() {
-        User testUser = new User(101L, "MC", "Hammer", 5555L, LocalDate.now(), LocalDate.of(2099, Month.DECEMBER, 31));
-        assertThrows(UserServiceException.class, () -> {
-            userService.getParentTree(testUser);
-        });
+        User testUser = new User(101L, "MC", "Hammer", "Black", 5555L, LocalDate.now(), LocalDate.of(2099, Month.DECEMBER, 31));
+        assertThrows(UserServiceException.class, () ->
+                userService.getParentTree(testUser)
+        );
     }
 }
